@@ -1,344 +1,84 @@
-<!--
-<div class="yes">SomeONE</div>
-<div class="divider-container">The Creative Team of Games&Network.</div> 
-<div class="no">Studio</div>
--->
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-dark.min.css">
+        <style>
+            @media (max-width: 767px) { body { padding: 15px; } }
+            body {  
+                    background-color: #0d1117;
+                    box-sizing: border-box;
+                    min-width: 200px;
+                    max-width: 980px;
+                    margin: 0 auto;
+                    padding: 45px; }
+        </style>
+        <title>SomeONE Studio</title>
+    </head>
+    <body>
+        <div id="$m" class="markdown-body"></div>
+        <textarea id="$t" style="display:none; background-color: #000;">
 
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <link rel="stylesheet" href="./__files/pmd4rkg.css">
-    <title>﻿</title>
-    <style>
-      body {
-        background: #030303;
-        height:100vh;
-        margin: 0;
-        padding: 0;
-      }
+<div align="center">
+<img src="./soslogo.png" alt="image" width="300" height="auto">
+<h1>SomeOne Studio</h1>
+<p>A indie game development group</p>
+</div>
 
-      @-webkit-keyframes blur {
-        0%, 100%  { -webkit-filter: blur(0px); }
-        50% { -webkit-filter: blur(3px); }
-      }
-      @keyframes blur {
-        0%, 100%  { -webkit-filter: blur(0px); }
-        50% { -webkit-filter: blur(3px); }
-      }
+<div align="center">
+<img src="https://img.shields.io/badge/team_size-5-blue" />
+<img src="https://img.shields.io/badge/team_status-active-green" />
+</div>
 
-      .container {
-        height: 100%;
-        width: 100%;
-        margin: 0 auto;
-        touch-action: none;
-        text-align: center;
-        filter: opacity(0);
-        -webkit-transition: 1.347s -webkit-filter linear;
-           -moz-transition: 1.347s -moz-filter linear;
-           -moz-transition: 1.347s filter linear;
-            -ms-transition: 1.347s -ms-filter linear;
-             -o-transition: 1.347s -o-filter linear;
-                transition: 1.347s filter linear, 0.3s -webkit-filter linear;
-        -webkit-animation: blur 2.17s;
-           -moz-animation: blur 2.17s;
-            -ms-animation: blur 2.17s;
-             -o-animation: blur 2.17s;
-                animation: blur 2.17s;
-      }
-      
-      .container.animated{
-        -webkit-transition: 2s -webkit-filter linear;
-           -moz-transition: 2s -moz-filter linear;
-           -moz-transition: 2s filter linear;
-            -ms-transition: 2s -ms-filter linear;
-             -o-transition: 2s -o-filter linear;
-                transition: 2s filter linear, 0.3s -webkit-filter linear;
-      }
+<h2>What are we doing?</h2>
 
-      .texture {
-        background-repeat: repeat-x;
-        background-position: bottom;
-        height: 227px;
-        width: 100%;
-      }
+- 🎮 We are developing games on multi-platform.
+- 🔨 We are working on some unofficial-creations of famous games, such as Minecraft, Terraria.
 
-      .top {
-        background-image: url('./assets/top-texture.png');
-        position: absolute;
-        top: 0;
-      }
-      
-      .bottom {
-        background-image: url('./assets/bottom-texture.png');
-        position: absolute;
-        bottom: 0;
-      }
-      .are-you-alone-containter {
-        width: 100%;
-        position: absolute;
-        bottom: 6%;
-      }
-      .are-you-alone {
-        color: #fff;
-        position: relative;
-        margin: 0 auto;
-      }
-      .are-you-alone img {
-        -webkit-transform: scale(0.8); /* Saf3.1+, Chrome */
-           -moz-transform: scale(0.8); /* FF3.5+ */
-            -ms-transform: scale(0.8); /* IE9 */
-             -o-transform: scale(0.8); /* Opera 10.5+ */
-                transform: scale(0.8);
-      }
+<h2>Our Staff Number in Total are <strong>5</strong></h2>
 
-      img.divider {
-        -webkit-transform: scale(0.8); /* Saf3.1+, Chrome */
-           -moz-transform: scale(0.8); /* FF3.5+ */
-            -ms-transform: scale(0.8); /* IE9 */
-             -o-transform: scale(0.8); /* Opera 10.5+ */
-                transform: scale(0.8);
-      }
 
-      .answer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        min-height: 100vh;
-        color: #fff;
-        max-width: 318px;
-        margin: 0 auto;
-        width: 90%;
-      }
-      .yes, .no {
-        position: relative;
-        top: 6px;
-        width: 100%;
-        text-align: left;
-        font-family: sofia-pro, sans-serif;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 32px;
-        filter: opacity(0.3);
-        margin: 0 10%;
-        cursor: pointer;
-        -webkit-transition: 0.3s -webkit-filter linear;
-           -moz-transition: 0.3s -moz-filter linear;
-           -moz-transition: 0.3s filter linear;
-            -ms-transition: 0.3s -ms-filter linear;
-             -o-transition: 0.3s -o-filter linear;
-                transition: 0.3s filter linear, 0.3s -webkit-filter linear;
-      }
-      .yes img, .no img {
-        position: relative;
-        top: 2px;
-        margin-right: 4%;
-        filter: opacity(0);
-        -webkit-transform: scale(0.8) scaleX(-1); /* Saf3.1+, Chrome */
-           -moz-transform: scale(0.8) scaleX(-1); /* FF3.5+ */
-            -ms-transform: scale(0.8) scaleX(-1); /* IE9 */
-             -o-transform: scale(0.8) scaleX(-1); /* Opera 10.5+ */
-                transform: scale(0.8) scaleX(-1);
+> <img src="./somerui.png" alt="image" width="100" height="auto" align="center">
+> <h1>somerui</h1>
+> <p style="font-size:18px;">Team Co-founder</p>
+> <p style="font-size:14px;">Main Director, Full-stack Engineer</p>
 
-        -webkit-transition: 0.3s -webkit-filter linear;
-           -moz-transition: 0.3s -moz-filter linear;
-           -moz-transition: 0.3s filter linear;
-            -ms-transition: 0.3s -ms-filter linear;
-             -o-transition: 0.3s -o-filter linear;
-                transition: 0.3s filter linear, 0.3s -webkit-filter linear;
-      }
-      .yes.hovered, .yes.clicked, .no.hovered, .no.clicked {
-        filter: opacity(0.8);
-      }
-      .yes.hovered img, .yes.clicked img, .no.hovered img, .no.clicked img {
-        filter: opacity(0.8);
-      }
+---
 
-      .no {
-        top: 3px;
-        -webkit-transform: rotate(180deg);
-           -moz-transform: rotate(180deg);
-             -o-transform: rotate(180deg);
-                transform: rotate(180deg);
-      }
 
-      .divider-container {
-        position: relative;
-        overflow: visible;
-        font-family: kingsgmb;
-      }
-      
-      .divider-container:before {
-        content: "";
-        position: absolute;
-        width: 80%;
-        height: 120px;
-        z-index: -1;
-        background-position: center;
-        background-size: cover;
-        top: 15px;
-        left: 53px;
-        filter: opacity(0.3);
-        -webkit-transition: 0.3s -webkit-filter linear;
-           -moz-transition: 0.3s -moz-filter linear;
-           -moz-transition: 0.3s filter linear;
-            -ms-transition: 0.3s -ms-filter linear;
-             -o-transition: 0.3s -o-filter linear;
-                transition: 0.3s filter linear, 0.3s -webkit-filter linear;
-      }
-      .divider-container.hovered:before {
-        filter: opacity(1);
-      }
+> <img src="./missing.png" alt="image" width="100" height="auto" align="center">
+> <h1>someqi</h1>
+> <p style="font-size:18px;">Team Co-founder</p>
+> <p style="font-size:14px;">Main Director</p>
 
-      .blackout {
-        position: absolute;
-        background-color: #030303;
-        height: 0;
-        z-index: 9999;
-        height: 100%;
-        width: 100%;
-      }
-      .blackout.animated {
-        -webkit-transition: 2s -webkit-filter linear;
-           -moz-transition: 2s -moz-filter linear;
-           -moz-transition: 2s filter linear;
-            -ms-transition: 2s -ms-filter linear;
-             -o-transition: 2s -o-filter linear;
-                transition: 2s filter linear, 0.3s -webkit-filter linear;
-      }
-      
-      @media screen and (max-device-width: 812px) and (orientation: portrait) {
-        .are-you-alone img {
-          -webkit-transform: scale(0.4); /* Saf3.1+, Chrome */
-             -moz-transform: scale(0.4); /* FF3.5+ */
-              -ms-transform: scale(0.4); /* IE9 */
-               -o-transform: scale(0.4); /* Opera 10.5+ */
-                  transform: scale(0.4);
-        }
-  
-        img.divider {
-          -webkit-transform: scale(0.4); /* Saf3.1+, Chrome */
-             -moz-transform: scale(0.4); /* FF3.5+ */
-              -ms-transform: scale(0.4); /* IE9 */
-               -o-transform: scale(0.4); /* Opera 10.5+ */
-                  transform: scale(0.4);
-        }
+---
 
-        .yes, .no {
-          width: 50%;
-          top: 6px;
-          font-size: 16px;
-        }
-        .no {
-          top: 3px
-        }
-        .yes img, .no img {
-          top: 8px;
-          margin-right: 2%;
-          -webkit-transform: scale(0.4) scaleX(-1); /* Saf3.1+, Chrome */
-             -moz-transform: scale(0.4) scaleX(-1); /* FF3.5+ */
-              -ms-transform: scale(0.4) scaleX(-1); /* IE9 */
-               -o-transform: scale(0.4) scaleX(-1); /* Opera 10.5+ */
-                  transform: scale(0.4) scaleX(-1);
-        }
+> <img src="./fakeanzel.png" alt="image" width="100" height="auto" align="center">
+> <h1>FAKE_ANZEL</h1>
+> <p style="font-size:18px;">Team Member</p>
+> <p style="font-size:14px;">Music Directo</p>
 
-        .divider-container:before {
-          content: "";
-          position: absolute;
-          width: 40%;
-          height: 60px;
-          z-index: -1;
-          background: url('./assets/no-shadow.png') 0 0 no-repeat;
-          background-position: center;
-          background-size: cover;
-          top: 13px;
-          left: 129px;
-        }
-      }
-    </style>
-  </head>
+---
 
-  <body data-new-gr-c-s-check-loaded="14.1028.0" data-gr-ext-installed="">
-    <div class="container" style="filter: opacity(1);">
-      <div class="answer-container">
-        <div class="answer">
-            <div class="yes">SomeONE</div>
-            <div class="divider-container">================================</div> 
-            <div class="no">Studio</div>
-          </div>
-      </div>
-      <div class="texture top"></div>
-      <div class="texture bottom"></div>
-    </div>
-  
-  <script>  
-    var clickedYes = false;
-    var clickedNo = false;
-    var dividerContainer = document.querySelector('.divider-container');
-    var yes = document.querySelector(".yes");
-    var no = document.querySelector(".no");
 
-    yes.addEventListener("mouseover", mOver, false);
-    yes.addEventListener("mouseout", mOut, false);
-    yes.addEventListener("click", mClicked, false);
+> <img src="./missing.png" alt="image" width="100" height="auto" align="center">
+> <h1>Vane</h1>
+> <p style="font-size:18px;">Team Member</p>
+> <p style="font-size:14px;">Back-end Engineer</p>
 
-    no.addEventListener("mouseover", mOverNo, false);
-    no.addEventListener("mouseout", mOutNo, false);
-    no.addEventListener("click", mClickedNo, false);
+---
 
-    var container = document.querySelector(".container");
-    setTimeout(function() {
-      container.style.filter = "opacity(1)";
-      eraseCookie('isBlackout');
-    }, 300);
 
-    function mClicked() {
-      if (clickedYes) {
-        yes.classList.remove("clicked")
-      } else {
-        yes.classList.add("clicked")
-        no.classList.remove("clicked")
-        setTimeout(function() {
-          window.location.href = "https://modrinth.com/user/SomeONE_Studio";
-        }, 347);
-      }
-      clickedYes = !clickedYes;
-      clickedNo = !clickedYes;
-    }
+> <img src="./missing.png" alt="image" width="100" height="auto" align="center">
+> <h1>*p</h1>
+> <p style="font-size:18px;">Team Member</p>
+> <p style="font-size:14px;">Graphic Designer</p>
 
-    function mOver() {
-      yes.classList.add("hovered")
-    }
+---
 
-    function mOut() {  
-      yes.classList.remove("hovered")
-    }
-
-    function mClickedNo() {
-      if (clickedNo) {
-        no.classList.remove("clicked")
-      } else {
-        no.classList.add("clicked")
-        yes.classList.remove("clicked")
-        setTimeout(function() {
-          window.location.href = "https://github.com/SomeONEStudio";
-        }, 347);
-      }
-      clickedNo = !clickedNo;
-      clickedYes = !clickedNo;
-    }
-
-    function mOverNo() {
-      no.classList.add("hovered")
-      dividerContainer.classList.add("hovered")
-    }
-
-    function mOutNo() {  
-      no.classList.remove("hovered")
-      dividerContainer.classList.remove("hovered")
-    }
-  </script>
-</body></html>
+        </textarea>
+        <script>$m.innerHTML = marked.parse($t.value);</script>
+    </body>
+</html>
