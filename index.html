@@ -16,14 +16,11 @@
                     padding: 45px; }
         </style>
         <script>
-                    // Markdown 文件的 URL
             const markdownUrl = 'https://raw.githubusercontent.com/SomeONEStudio/.github/refs/heads/main/profile/README.md';
             fetch(markdownUrl)
             .then(response => response.text())
             .then(text => {
-                // 使用 marked.js 将 Markdown 转换为 HTML
                 const htmlContent = marked.parse(text);
-                // 将生成的 HTML 插入到页面中
                 document.getElementById('content').innerHTML = htmlContent;
             })
             .catch(error => console.error('Error fetching Markdown:', error));
