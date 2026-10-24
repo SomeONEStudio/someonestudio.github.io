@@ -1,385 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#080808">
-	<meta name="description" content="SomeONE Studio is a creative collective developing games, fan works, and other creative projects.">
-	<title>SomeONE Studio</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#080808">
+		<meta name="description" content="SomeONE Studio is a creative collective developing games, fan works, and other creative projects.">
+		<title>SomeONE Studio</title>
+		<link rel="stylesheet" href="/css.css">
+	</head>
 
-	<style>
-		:root {
-			color-scheme: dark;
-			--bg: #080808;
-			--surface: #111;
-			--surface-hover: #171717;
-			--text: #f5f5f5;
-			--muted: #aaa;
-			--accent: #40d9cf;
-			--border: #343434;
-			--radius: 8px;
-			--content-width: 1000px;
-		}
-
-		* {
-			box-sizing: border-box;
-		}
-
-		html {
-			scroll-behavior: smooth;
-		}
-
-		body {
-			max-width: var(--content-width);
-			margin: 0 auto;
-			padding: 32px 24px;
-			background: var(--bg);
-			color: var(--text);
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 16px;
-			line-height: 1.7;
-			overflow-wrap: anywhere;
-		}
-
-		a {
-			color: var(--accent);
-			text-decoration: none;
-			text-underline-offset: 4px;
-		}
-
-		a:hover {
-			color: #9ffaf3;
-			text-decoration: underline;
-		}
-
-		a:focus-visible,
-		button:focus-visible {
-			outline: 2px solid var(--accent);
-			outline-offset: 4px;
-		}
-
-		code,
-		pre {
-			font-family: Consolas, "Liberation Mono", monospace;
-			font-size: 0.875rem;
-		}
-
-		code {
-			overflow-wrap: anywhere;
-		}
-
-		h1, h2, h3 {
-			line-height: 1.3;
-		}
-
-		h1 {
-			margin: 20px 0 8px;
-			font-size: clamp(1.8rem, 5vw, 2.6rem);
-			text-align: center;
-		}
-
-		h2 {
-			margin: 44px 0 18px;
-			padding-bottom: 8px;
-			border-bottom: 1px solid var(--border);
-			font-size: 1.5rem;
-		}
-
-		h3 {
-			margin: 0 0 8px;
-			font-size: 1.2rem;
-		}
-
-		p {
-			margin: 12px 0;
-		}
-
-		.site-header {
-			text-align: center;
-		}
-
-		.brand-logo {
-			display: block;
-			width: min(260px, 60%);
-			height: auto;
-			margin: 0 auto;
-		}
-
-		.tagline {
-			margin: 0;
-			color: var(--muted);
-		}
-
-		hr {
-			margin: 32px 0;
-			border: 0;
-			border-top: 1px solid var(--border);
-		}
-
-		.project-list {
-			padding-left: 24px;
-		}
-
-		.project-list li {
-			margin: 8px 0;
-		}
-
-		.staff-grid {
-			display: grid;
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-			gap: 16px;
-		}
-
-		.staff-card {
-			margin: 0;
-			padding: 20px;
-			border: 1px solid var(--border);
-			border-left: 4px solid #d0d0c0;
-			border-radius: var(--radius);
-			background: var(--surface);
-		}
-
-		.staff-card p {
-			margin: 8px 0 0;
-		}
-
-		.staff-role {
-			font-weight: 700;
-		}
-
-		.staff-alias {
-			color: var(--muted);
-			font-style: italic;
-		}
-
-		.note {
-			color: var(--muted);
-			font-size: 0.925rem;
-		}
-
-		.key-block {
-			margin: 16px 0;
-			padding: 16px;
-			border: 1px solid var(--border);
-			border-radius: var(--radius);
-			background: var(--surface);
-		}
-
-		.key-block pre {
-			max-width: 100%;
-			margin: 12px 0 0;
-			white-space: pre-wrap;
-			overflow-wrap: anywhere;
-			word-break: break-word;
-		}
-
-		.fingerprint {
-			display: block;
-			margin: 8px 0;
-			padding: 12px;
-			border-radius: 4px;
-			background: #1b1b1b;
-			user-select: all;
-		}
-
-
-.donation-grid {
-display: grid;
-grid-template-columns: minmax(0, 1fr);
-gap: 16px;
-width: 100%;
-max-width: 90%;
-margin: 0 auto;
-}
-
-.donation-card {
-    width: 100%;
-    min-width: 0;
-    padding: 20px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--surface);
-}
-
-
-		.donation-card h3 {
-			margin-bottom: 12px;
-		}
-
-		.wallet-address {
-			display: block;
-			margin: 10px 0;
-			padding: 12px;
-			border: 1px solid var(--border);
-			border-radius: 4px;
-			background: #080808;
-			font-size: 0.8rem;
-			line-height: 1.6;
-			user-select: all;
-		}
-
-		.qr-code {
-			display: block;
-			width: min(180px, 100%);
-			height: auto;
-			margin: 16px auto 0;
-			background: #fff;
-			image-rendering: pixelated;
-		}
-
-		.social-links {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 12px;
-		}
-
-		.social-links a {
-			display: inline-block;
-			padding: 8px 14px;
-			border: 1px solid var(--border);
-			border-radius: 6px;
-			background: var(--surface);
-		}
-
-		.social-links a:hover {
-			background: var(--surface-hover);
-			text-decoration: none;
-		}
-
-		.site-footer {
-			margin-top: 48px;
-			padding-top: 20px;
-			border-top: 1px solid var(--border);
-			color: var(--muted);
-			font-size: 0.875rem;
-			text-align: center;
-		}
-
-		@media (max-width: 640px) {
-			body {
-				padding: 24px 16px;
-			}
-
-			.staff-grid,
-			.donation-grid {
-				grid-template-columns: 1fr;
-			}
-
-			.brand-logo {
-				width: min(220px, 65%);
-			}
-
-			h2 {
-				margin-top: 36px;
-			}
-		}
-
-		@media (prefers-reduced-motion: reduce) {
-			html {
-				scroll-behavior: auto;
-			}
-		}
-	</style>
-</head>
-
-<body>
-	<header class="site-header">
-		<svg
-			class="brand-logo"
-			xmlns="http://www.w3.org/2000/svg"
-			viewBox="0 0 1024 1024.67"
-			role="img"
-			aria-label="SomeONE Studio logo"
-		>
-			<g fill="#fff">
-				<polyline points="0 528.33 64 528.33 64 960 960 960 960 528.33 1024 528.33 1024 1024 64 1024.67 0 1024.67"/>
-				<polyline points="0 496.33 64 496.33 64 64.67 960 64.67 960 496.33 1024 496.33 1024 0.67 64 0 0 0"/>
-				<polyline points="514.67 928.72 96 928.72 96 528.33 750.18 528.68 514.67 928.72"/>
-				<polyline points="508.97 96.83 927.64 96.83 927.64 497.22 273.46 496.88 508.97 96.83"/>
-			</g>
-		</svg>
-
-		<h1>SomeONE Studio</h1>
-		<p class="tagline">
-			A creative collective that does a bit of everything.
-		</p>
-
-		<hr>
-	</header>
-
-	<main>
-		<section aria-labelledby="activities-heading">
-			<h2 id="activities-heading">What are we doing?</h2>
-
-			<ul class="project-list">
-				<li>We develop games for multiple platforms.</li>
-				<li>We create unofficial fan works inspired by well-known games such as Minecraft and Genshin Impact.</li>
-				<li>And other things that are not listed here.</li>
-			</ul>
-		</section>
-
-		<section aria-labelledby="staff-heading">
-			<h2 id="staff-heading">Staff</h2>
-
-			<div class="staff-grid">
-				<article class="staff-card">
-					<h3>
-						<a href="https://somerui.work">somerui</a>
-					</h3>
-					<p class="staff-role">Team Co-founder</p>
-					<p class="staff-alias">a.k.a. Jeff</p>
-					<p>
-						Main Director, Music Production, Full-stack Engineering,
-						Graphic and 3D Design
-					</p>
-				</article>
-
-				<article class="staff-card">
-					<h3>
-						<a href="https://github.com/someq1">Keysama</a>
-					</h3>
-					<p class="staff-role">Team Co-founder</p>
-					<p class="staff-alias">a.k.a. someqi</p>
-					<p>
-						Main Director, Publicity and Communications,
-						Front-end Engineering
-					</p>
-				</article>
-			</div>
-
-			<p class="note">
-				We have other members who are not listed here at their own request.
+	<body>
+		<header class="site-header">
+			<svg
+				class="brand-logo"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 1024 1024.67"
+				role="img"
+				aria-label="SomeONE Studio logo"
+			>
+				<g fill="#fff">
+					<polyline points="0 528.33 64 528.33 64 960 960 960 960 528.33 1024 528.33 1024 1024 64 1024.67 0 1024.67"/>
+					<polyline points="0 496.33 64 496.33 64 64.67 960 64.67 960 496.33 1024 496.33 1024 0.67 64 0 0 0"/>
+					<polyline points="514.67 928.72 96 928.72 96 528.33 750.18 528.68 514.67 928.72"/>
+					<polyline points="508.97 96.83 927.64 96.83 927.64 497.22 273.46 496.88 508.97 96.83"/>
+				</g>
+			</svg>
+			<h1>SomeONE Studio</h1>
+			<p class="tagline">
+				A creative collective that does a bit of everything.
 			</p>
-		</section>
+			<hr>
+		</header>
 
-		<section aria-labelledby="donate-heading">
-			<h2 id="donate-heading">Donate to Us</h2>
+		<main>
+			<section aria-labelledby="activities-heading">
+				<h2 id="activities-heading">What are we doing?</h2>
 
-			<p>
-				Always verify messages using our official OpenPGP key.
-				Do not trust a message merely because it claims to be from us.
-			</p>
+				<ul class="project-list">
+					<li>We develop games for multiple platforms.</li>
+					<li>We create unofficial fan works inspired by well-known games such as Minecraft and Genshin Impact.</li>
+					<li>... and other things that are not listed here.</li>
+				</ul>
+			</section>
 
-			<div class="key-block">
-				<p><strong>OpenPGP Fingerprint</strong></p>
+			<section aria-labelledby="staff-heading">
+				<h2 id="staff-heading">Staff</h2>
+				<h3>Current Staff</h3>
+				<div class="staff-grid">
+					<article class="staff-card">
+						<strong>
+							<a href="https://somerui.work">somerui</a>
+						</strong>
+						<p class="staff-role">Team Co-founder, Team Manager</p>
+						<p class="staff-alias">a.k.a. Jeff</p>
+						<p>
+							Main Director, Music Production, Full-stack Engineering,
+							Graphic and 3D Design
+						</p>
+					</article>
 
-				<code class="fingerprint">F6ECF43763244053DDBF7455F6C20A91ED817347</code>
 
-				<p>
-					<strong>User ID:</strong>
-					<code>SomeONE Studio &lt;someone_studio@outlook.com&gt;</code>
+					<article class="staff-card">
+						<strong>
+							<a href="https://fakeanzel.github.io">FAKE_ANZEL</a>
+						</strong>
+						<p class="staff-role">Team Staff</p>
+						<p>
+							Music Production, Sound Design
+						</p>
+					</article>
+					
+				</div>
+				<h3>Outsider Collaborator</h3>
+				<p class="note">The following individuals are not part of SomeONE Studio, but have established a long-term collaborative relationship with us:</p>
+				<div class="staff-grid">
+					<article class="staff-card">
+						<strong>
+							<span style="color: var(--accent);">EeXL1</span>
+						</strong>
+						<p class="staff-role">Outside Collaborator</p>
+					</article>
+				</div>
+				<p class="note">
+					The following individuals were previously part of SomeONE Studio or collaborated with us, but have since left the team or are no longer working with us. <br>
+					In recognition of their significant contributions to us, we list here those who have journeyed alongside us. 
 				</p>
-
-				<p>
-					<a href="https://keys.openpgp.org/vks/v1/by-fingerprint/F6ECF43763244053DDBF7455F6C20A91ED817347">
-						Download the public key from keys.openpgp.org
-					</a>
+				<div class="staff-grid">
+					<article class="staff-card">
+						<strong>
+							<a href="https://github.com/someq1">Keysama</a>
+						</strong>
+						<p class="staff-role">Team Co-founder, Former Team Manager</p>
+						<p class="staff-alias">a.k.a. someqi</p>
+						<p>
+							Former Main Director, Publicity and Communications, Front-end Engineering
+						</p>
+						<p><a href="https://someq1.github.io/statement">Resignation Statement</a></p>
+					</article>
+				</div>
+				<p class="note">
+					We have other members who are not listed here at their own request.
 				</p>
-
-				<details>
-					<summary>Show OpenPGP public key</summary>
-
-					<pre><code>-----BEGIN PGP PUBLIC KEY BLOCK-----
+			</section>
+			<section aria-labelledby="donate-heading">
+				<h2 id="donate-heading">Donate to Us</h2>
+				<p>
+					Always verify messages using our official OpenPGP key.
+					Do not trust a message merely because it claims to be from us.
+				</p>
+				<div class="key-block">
+					<p><strong>OpenPGP Fingerprint</strong></p>
+					<code class="framed-code">F6ECF43763244053DDBF7455F6C20A91ED817347</code>
+					<p>
+						<strong>User ID:</strong>
+						<code>SomeONE Studio &lt;someone_studio@outlook.com&gt;</code>
+					</p>
+					<p>
+						<a href="https://keys.openpgp.org/vks/v1/by-fingerprint/F6ECF43763244053DDBF7455F6C20A91ED817347">
+							Download the public key from keys.openpgp.org
+						</a>
+					</p>
+					<details>
+						<summary>Show OpenPGP public key</summary>
+						<pre><code class="framed-code">-----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mDMEaJhDvRYJKwYBBAHaRw8BAQdAj38XxXuM6woP2XDf9IhMftDsPid6XnfZmi/d
 BuNYDWW0K1NvbWVPTkUgU3R1ZGlvIDxzb21lb25lX3N0dWRpb0BvdXRsb29rLmNv
@@ -393,27 +136,31 @@ o2lf3ZbckzprUijw4qQiGAIzJbXRAP9AgOCbZZ228R6/ddTkmqG7Y6itgVwFI3Ga
 HOO4iY4yDA==
 =nMMj
 -----END PGP PUBLIC KEY BLOCK-----</code></pre>
-				</details>
-			</div>
-
-			<div class="donation-grid">
-				<article class="donation-card">
-					<h3>Bitcoin (BTC)</h3>
-
-					<code class="wallet-address">bc1qx9z4ved0kg7rduwzcvs48de8yrqwghyqgn98eu</code>
-
-					<img
-						class="qr-code"
-						src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=bc1qx9z4ved0kg7rduwzcvs48de8yrqwghyqgn98eu"
-						width="240"
-						height="240"
-						alt="QR code for the Bitcoin donation address"
-						loading="lazy"
-						decoding="async"
-					>
-					<details>
-						<summary>See the signs</summary>
-						<pre><code>-----BEGIN PGP SIGNED MESSAGE-----
+					</details>
+				</div>
+				<div class="key-block">
+					<article class="donation-card">
+						<strong>Bitcoin (BTC)</strong>
+						<code class="framed-code">bc1qx9z4ved0kg7rduwzcvs48de8yrqwghyqgn98eu</code>
+						<img
+							class="qr-code"
+							src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=bc1qx9z4ved0kg7rduwzcvs48de8yrqwghyqgn98eu"
+							width="240"
+							height="240"
+							alt="QR code for the Bitcoin donation address"
+							loading="lazy"
+							decoding="async"
+						>
+						<p class="note">
+						Verify the network and address before sending any funds. 
+						Only send BTC to the BTC address. <br>
+						<strong>QR codes are loaded from an external service, check the address before send.</strong>
+				</p>
+						<details>
+							<summary>Signature to verify address</summary>
+							<pre>
+								<code class="framed-code">
+-----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
 
 bc1qx9z4ved0kg7rduwzcvs48de8yrqwghyqgn98eu
@@ -421,47 +168,40 @@ bc1qx9z4ved0kg7rduwzcvs48de8yrqwghyqgn98eu
 This address is held by SomeONE Studio, which is responsible for receiving sponsorship payments from the Bitcoin network.
 This address will remain valid until further notice.
 
-SomeONE Studio <someone_studio@outlook.com>
+SomeONE Studio "someone_studio@outlook.com"
 F6ECF43763244053DDBF7455F6C20A91ED817347
 
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQT27PQ3YyRAU92/dFX2wgqR7YFzRwUCatt99QAKCRD2wgqR7YFz
-RyDSAQDMOQd0r1dFnpajCA40sHQeRS2uNkjAGlRqs3k+yEIPLgEA5f0PWzIfFM2/
-yfKtP9j8ggo1NTpDWKH4QkpzkmghDAM=
-=fjPZ
+iHUEARYKAB0WIQT27PQ3YyRAU92/dFX2wgqR7YFzRwUCatxJtwAKCRD2wgqR7YFz
+RxdnAQDFwB9aq+8u9JQ2TAnFmiQiSr1UsdphFzGOG8GImzx8JwEA4IEf1Jbnnijx
+GNj1S83OhM9oF2Woix6XdKw0s/DsWw8=
+=cSTl
 -----END PGP SIGNATURE-----
-</code>
-					<p>Bitcoin signature:</p>
-<code>IFQ84bSTz8ytrdBPHEWMWd56XV3Ni0qX1HgWj38CrhC4bHXpLGjlYzCDVVuah/NMAfQT2s9cCHz9e/ya28wrj7o=</code>
-					</pre>
-					</details>
-				</article>
-			</div>
 
-			<p class="note">
-				Verify the network and address before sending any funds.
-				Only send BTC to the BTC address and LTC to the LTC address.
-				QR codes are loaded from an external service.
-			</p>
-		</section>
-
-		<section aria-labelledby="contact-heading">
-			<h2 id="contact-heading">Contact &amp; Social Media</h2>
-
-			<nav class="social-links" aria-label="Contact and social media">
-				<a
-					href="https://bsky.app/profile/did:plc:xsjk5mrqxnerfwrjw25von56"
-					rel="me"
-				>Bluesky</a>
-
-				<a href="mailto:someone_studio@outlook.com">Email</a>
-			</nav>
-		</section>
-	</main>
-
-	<footer class="site-footer">
-		<p>&copy; SomeONE Studio 2026. All Rights Reserved.</p>
-	</footer>
-</body>
+								</code>
+							</pre>
+							<p>
+								<strong>Bitcoin signature:</strong>
+								<code>H0uHDzGu3LVVy69TNCORvoNaacBKaDKDtRMwrmfAGHSLKd7TuXRRTOFt8q82Wv1qWmkh4Upq6liZyixOGguXgH8=</code>
+							</p>
+						</details>
+					</article>
+				</div>
+			</section>
+			<section aria-labelledby="contact-heading">
+				<h2 id="contact-heading">Contact &amp; Social Media</h2>
+				<nav class="social-links" aria-label="Contact and social media">
+					<a
+						href="https://bsky.app/profile/did:plc:xsjk5mrqxnerfwrjw25von56"
+						rel="me"
+					>Bluesky</a>
+					<a href="mailto:someone_studio@outlook.com">Email</a>
+				</nav>
+			</section>
+		</main>
+		<footer class="site-footer">
+			<p>&copy; SomeONE Studio 2026. All Rights Reserved.</p>
+		</footer>
+	</body>
 </html>
